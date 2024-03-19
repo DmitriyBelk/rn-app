@@ -1,8 +1,8 @@
 import { Pressable, StyleSheet, TextInput, TextInputProps, View } from "react-native";
 import { Colors, Radius } from "../tokens";
 import { useState } from "react";
-import OpenedEyeIcon from "../../assets/icons/opened-eye";
-import ClosedEyeIcon from "../../assets/icons/closed-eye";
+import OpenedEyeIcon from "../../assets/icons/eye-opened";
+import ClosedEyeIcon from "../../assets/icons/eye-closed";
 
 const Input = ({isPassword, ...props}: TextInputProps & { isPassword?: boolean }) => {
   const [isPasswordVisible, setIsPasswordVisible] = useState<boolean>(false);

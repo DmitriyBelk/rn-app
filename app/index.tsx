@@ -8,10 +8,10 @@ import {
   ToastAndroid,
   Platform,
 } from "react-native";
-import Input from "./shared/Input/Input";
-import { Colors, Gaps } from "./shared/tokens";
-import Button from "./shared/Button/Button";
-import ErrorNotification from "./shared/ErrorNotification/ErrorNotification";
+import Input from "../shared/Input/Input";
+import { Colors, Gaps } from "../shared/tokens";
+import Button from "../shared/Button/Button";
+import ErrorNotification from "../shared/ErrorNotification/ErrorNotification";
 import { useState } from "react";
 
 export default function App() {
@@ -41,7 +41,7 @@ export default function App() {
         <Image
           resizeMode="contain"
           style={styles.logo}
-          source={require("./assets/logo.png")}
+          source={require("../assets/logo.png")}
         />
         <View style={styles.form}>
           <Input placeholder="Email" />
