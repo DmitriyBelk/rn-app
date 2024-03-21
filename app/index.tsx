@@ -13,9 +13,10 @@ import { Colors, Gaps } from "../shared/tokens";
 import Button from "../shared/Button/Button";
 import ErrorNotification from "../shared/ErrorNotification/ErrorNotification";
 import { useState } from "react";
+import { Link } from "expo-router";
 
-export default function App() {
-  const width = Dimensions.get("window").width;
+export default function Login() {
+  // const width = Dimensions.get("window").width;
   const [error, setError] = useState<string | undefined>();
 
   const alert = () => {
@@ -48,7 +49,7 @@ export default function App() {
           <Input isPassword placeholder="Password" />
           <Button text="Войти" onPress={alert} />
         </View>
-        <Text>Восстановить пароль</Text>
+        <Link href={'/restore'}>Восстановить пароль</Link>
       </View>
     </View>
   );
@@ -57,7 +58,6 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     justifyContent: "center",
-    // alignItems: 'center',
     padding: 55,
     flex: 1,
     backgroundColor: Colors.black,

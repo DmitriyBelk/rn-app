@@ -32,19 +32,6 @@ const Button = ({ text, ...props }: PressableProps & { text: string }) => {
     }).start();
     props.onPressOut && props.onPressOut(e);
   };
-  // const animatedValue = new Animated.ValueXY({
-  //   x: 0,
-  //   y: 0,
-  // });
-
-  // Animated.timing(animatedValue, {
-  //   toValue: {
-  //     x: 1,
-  //     y: 1,
-  //   },
-  //   duration: 200,
-  //   useNativeDriver: false
-  // }).start();
 
   return (
     <Pressable {...props} onPressIn={fadeIn} onPressOut={fadeOut}>
@@ -66,6 +53,7 @@ const styles = StyleSheet.create({
   text: {
     color: Colors.white,
     fontSize: 18,
+    fontFamily: 'FiraSans'
   },
 });
 
